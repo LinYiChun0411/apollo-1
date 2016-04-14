@@ -8,10 +8,12 @@
 
 	<properties>
 		<jdk.version>1.7</jdk.version>
+		<project.encoding>UTF-8</project.encoding>
 	</properties>
 
 	<modules>
 		<module>apollo-codeGenerator</module>
+		<module>apollo-websiteManager</module>
 	</modules>
 
 	<dependencies>
