@@ -30,7 +30,7 @@
 		</javaTypeResolver>
 
 		<!-- 生成实体类地址 -->
-		<javaModelGenerator targetPackage="com.sain.entity" targetProject="${javaModelGenerator.targetProject}">
+		<javaModelGenerator targetPackage="${javaModelGenerator.targetPackage}" targetProject="${javaModelGenerator.targetProject}">
 			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
 			<property name="enableSubPackages" value="false" />
 			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
@@ -38,13 +38,13 @@
 		</javaModelGenerator>
 
 		<!-- 生成mapxml文件 -->
-		<sqlMapGenerator targetPackage="com.sain.mapper" targetProject="${sqlMapGenerator.targetProject}">
+		<sqlMapGenerator targetPackage="${sqlMapGenerator.targetPackage}" targetProject="${sqlMapGenerator.targetProject}">
 			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 
 		<!-- 生成mapxml对应client，也就是接口dao -->
-		<javaClientGenerator targetPackage="com.sain.mapper" targetProject="${javaClientGenerator.targetProject}" type="XMLMAPPER">
+		<javaClientGenerator targetPackage="${javaClientGenerator.targetPackage}" targetProject="${javaClientGenerator.targetProject}" type="XMLMAPPER">
 			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
