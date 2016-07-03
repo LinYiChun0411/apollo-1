@@ -1,0 +1,14 @@
+#Bmsub_general .c_white3>i:first-child,
+#Bmsub_optional .c_white3>i:first-child,
+#betOrderQuery .c_white3>i:first-child{
+	filter:alpha(opacity=30)
+	}
+.ui-popup-modal .ui-dialog{
+	background-color:#666
+	}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title>select:first-child{
+	padding:0
+	}
+#creatGtjhBtn,#creatBtjhBtn{
+	background:transparent;behavior:none
+}

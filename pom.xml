@@ -14,6 +14,7 @@
 	<modules>
 		<module>apollo-codeGenerator</module>
 		<module>apollo-websiteManager</module>
+		<module>apollo-website-multitenancy</module>
 	</modules>
 
 	<dependencies>

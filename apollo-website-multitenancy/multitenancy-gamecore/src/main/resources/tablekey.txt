@@ -1,0 +1,9 @@
+tablename:tablekey 
+mny_money_record:1
+sys_account:2
+third_station_group:3
+sys_annoucement:4
+sys_proposal:5
+admin_menu:6
+sys_register_config:7
+agent_base_config:8

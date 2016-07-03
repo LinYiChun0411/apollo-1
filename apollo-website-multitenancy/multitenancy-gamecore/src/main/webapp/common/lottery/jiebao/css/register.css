@@ -1,0 +1,37 @@
+@charset "utf-8";a{outline:medium none}
+a img{border:0}
+.hide{display:none}
+.w100{width:100%}
+.w95{width:95%}
+.w90{width:90%}
+.w80{width:80%}
+.w70{width:70%}
+.w60{width:60%}
+.w50{width:50%}
+.w40{width:40%}
+.w30{width:30%}
+.w20{width:20%}
+.w10{width:10%}
+.filterorg5{filter:alpa(opacity=50);filter:alpha(opacity=50,FinishOpacity=15,Style=3,StartX=0,FinishX=100,StartY=0,FinishY=16);-moz-opacity:.5;opacity:.5}
+label.error{z-index:20;position:absolute;top:-8px;border:0;right:-20px;color:#fff;background:#f00;padding:0 10px;height:25px;line-height:25px}
+.positionre{position:relative}
+.growlUI{color:white;margin:10px;text-align:left}
+.growlUI i{float:left;margin-right:20px}
+.growlUI h4{font-size:16px}
+.growlUI p{font-size:14px;margin-top:5px}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+.clearfix:after{content:"";display:block;clear:both}
+.clearfix{zoom:1}
+.clear-fix:after,.ticket:after,.games-info:after,.standard:after,.ticket-area:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+body{color:#fff;font-size:14px;font-family:"微軟正黑體";background:#1a0001 url(../images/register_bg.jpg) repeat-x 0 0;}
+.header{position:relative;height:90px;display:block}
+.container{width:700px;margin:0 auto;position:relative;text-align:center;padding:0 10px}
+.logo{width:300px;height:90px;background:url(../images/register_logo.png) no-repeat center;margin:0 auto 20px auto}
+.title{width:700px;height:35px;line-height:35px;font-size:18px;background:#5a0002;border-radius:10px 10px 0 0}
+.info-wrapper{background:url(../images/b30.png);padding:30px;border:1px solid #162330;height:575px;margin-bottom:25px;}

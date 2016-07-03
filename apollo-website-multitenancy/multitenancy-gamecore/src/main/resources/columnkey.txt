@@ -1,0 +1,14 @@
+tablekey--columnname:columnkey
+1--type:1
+2--account_status:1
+2--account_type:2
+3--status:1
+4--status:1
+4--type:2
+5--status:1
+6--status:1
+7--status:1
+7--platform:2
+7--type:3
+7--show:4
+8--type:1

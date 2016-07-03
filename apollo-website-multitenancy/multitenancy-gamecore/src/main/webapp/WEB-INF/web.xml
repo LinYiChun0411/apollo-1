@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app  
+        version="3.0"  
+        xmlns="http://java.sun.com/xml/ns/javaee"  
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">   
+	
+	<display-name>game</display-name>
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>game.root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:applicationContext.xml
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j.properties</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>org.jay.frame.FrameListeners</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>com.game.core.SystemListener</listener-class>
+	</listener>
+
+	<filter>   
+	    <filter-name>fileFilter</filter-name>   
+	    <filter-class>    
+	        com.game.core.StaticFileFilter 
+	    </filter-class>    
+	</filter>  
+	
+	<filter-mapping>   
+	    <filter-name>fileFilter</filter-name>   
+	    <url-pattern>*.css</url-pattern>  
+	</filter-mapping>
+	
+	<filter-mapping>  
+	    <filter-name>fileFilter</filter-name>  
+	    <url-pattern>*.js</url-pattern>  
+	</filter-mapping>  
+	
+	
+	<filter>   
+	    <filter-name>threadDataFilter</filter-name>   
+	    <filter-class>    
+	        org.jay.frame.filter.ThreadDataFilter  
+	    </filter-class>    
+	    <init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>  
+	
+	<filter-mapping>   
+	    <filter-name>threadDataFilter</filter-name>   
+	    <url-pattern>*.do</url-pattern> 
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>  
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param> 
+		    <param-name>contextConfigLocation</param-name> 
+		    <param-value>classpath*:*-servlet.xml</param-value> 
+		</init-param>
+		<load-on-startup>1</load-on-startup>	
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 代理首页 -->
+	<servlet>
+		<servlet-name>systemservlet</servlet-name>
+		<servlet-class>com.game.core.SystemServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>systemservlet</servlet-name>
+		<url-pattern>/agent</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>systemservlet</servlet-name>
+		<url-pattern>/agent/</url-pattern>
+	</servlet-mapping>
+
+	<!-- 权限标签 -->
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/permission</taglib-uri>
+			<taglib-location>/WEB-INF/permission.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	
+	<welcome-file-list>
+		<welcome-file>index.do</welcome-file>
+	</welcome-file-list>
+</web-app>  
+          
