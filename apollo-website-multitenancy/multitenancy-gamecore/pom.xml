@@ -136,9 +136,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.jay</groupId>
-			<artifactId>frame-core</artifactId>
-			<version>1.0.16</version>
+			<groupId>com.sain</groupId>
+			<artifactId>multitenancy-framecore</artifactId>
+			<version>0.0.1</version>
 		</dependency>
 
 		<dependency>
